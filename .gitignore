@@ -1,0 +1,9 @@
+data/
+__pycache__/
+*.pyc
+.venv/
+venv/
+web/vendor/
+.superpowers/
+*.db
+.env
