@@ -40,16 +40,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# --- carried over from the original repo ---
-data/
-__pycache__/
-*.pyc
-.venv/
-venv/
-web/vendor/
-.superpowers/
-*.db
-.env
-
 # Env documentation is safe to commit; real keys live in .env.local
 !.env.example
