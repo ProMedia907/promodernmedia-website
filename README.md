@@ -68,8 +68,10 @@ form service (Formspree, Basin, or your own route handler) to post instead.
       is accurate while there are no clients — do not add outcome claims you
       cannot evidence.
 - [ ] **Check the statistics** in `stats` still match their linked sources.
-- [ ] Set the real domain in `metadataBase` in `src/app/layout.tsx`.
-- [ ] Add an OG share image.
+- [ ] **Set the real domain.** Set `NEXT_PUBLIC_SITE_URL` in `.env.local`. It
+      falls back to `https://promodernmedia.co.uk`, a placeholder that has
+      never been verified as owned. Canonical URLs and the share card point
+      there until you change it.
 
 ## Notes
 

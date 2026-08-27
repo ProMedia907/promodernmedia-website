@@ -20,8 +20,16 @@ const displaySerif = Cormorant_Garamond({
   weight: ["300", "400", "500", "600"],
 });
 
+/**
+ * Canonical origin for absolute URLs in metadata and the share card.
+ * Set NEXT_PUBLIC_SITE_URL once the real domain is confirmed; the fallback
+ * below is a placeholder and has never been verified as owned.
+ */
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://promodernmedia.co.uk";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://promodernmedia.co.uk"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: `${site.name} — Web design for UK local business`,
     template: `%s — ${site.name}`,
