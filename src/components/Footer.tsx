@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { nav, site } from "@/lib/site";
 
 export default function Footer() {
@@ -21,6 +22,12 @@ export default function Footer() {
               {item.label}
             </a>
           ))}
+          <Link
+            href="/privacy"
+            className="text-sm text-muted transition-colors hover:text-bone"
+          >
+            Privacy
+          </Link>
           <a
             href={`mailto:${site.email}`}
             className="text-sm text-muted transition-colors hover:text-bone"

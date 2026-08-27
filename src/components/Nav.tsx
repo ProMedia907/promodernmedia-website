@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { nav, site } from "@/lib/site";
 
@@ -31,8 +32,8 @@ export default function Nav() {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
-        <a
-          href="#top"
+        <Link
+          href="/"
           className="flex items-center gap-2.5 text-sm font-semibold tracking-tight"
           onClick={() => setOpen(false)}
         >
@@ -40,7 +41,7 @@ export default function Nav() {
             P
           </span>
           {site.name}
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
           {nav.map((item) => (
@@ -52,12 +53,12 @@ export default function Nav() {
               {item.label}
             </a>
           ))}
-          <a
-            href="#contact"
+          <Link
+            href="/#contact"
             className="rounded-full bg-bone px-5 py-2.5 text-sm font-semibold text-ink transition-transform hover:scale-[1.03]"
           >
             Get a quote
-          </a>
+          </Link>
         </nav>
 
         <button
@@ -106,13 +107,13 @@ export default function Nav() {
                 {item.label}
               </a>
             ))}
-            <a
-              href="#contact"
+            <Link
+              href="/#contact"
               onClick={() => setOpen(false)}
               className="mt-3 rounded-lg bg-accent px-3 py-3.5 text-center text-base font-semibold text-white"
             >
               Get a quote
-            </a>
+            </Link>
           </nav>
         </div>
       ) : null}

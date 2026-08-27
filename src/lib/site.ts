@@ -5,12 +5,20 @@ export const site = {
   location: "United Kingdom",
 };
 
+/**
+ * Canonical origin for absolute URLs (metadata, sitemap, share card).
+ * Set NEXT_PUBLIC_SITE_URL once the real domain is confirmed; the fallback
+ * is a placeholder that has never been verified as owned.
+ */
+export const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://promodernmedia.co.uk";
+
 export const nav = [
-  { label: "Work", href: "#work" },
-  { label: "Services", href: "#services" },
-  { label: "Reviews", href: "#reviews" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Process", href: "#process" },
+  { label: "Work", href: "/#work" },
+  { label: "Services", href: "/#services" },
+  { label: "Reviews", href: "/#reviews" },
+  { label: "Pricing", href: "/#pricing" },
+  { label: "Process", href: "/#process" },
 ];
 
 /**
@@ -202,7 +210,7 @@ export const breakEven = {
     "Build + Care Plan runs to £750 up front and £249 a month. Own It Outright is £5,000, once. The two lines cross just past month seventeen, so if you expect to still be trading in two years, outright is the cheaper decision. Drag the slider to see it.",
 };
 
-export const process = [
+export const processSteps = [
   {
     step: "01",
     title: "A proper conversation",

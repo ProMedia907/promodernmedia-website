@@ -1,4 +1,4 @@
-import { process } from "@/lib/site";
+import { processSteps } from "@/lib/site";
 import Reveal from "./Reveal";
 
 export default function Process() {
@@ -17,7 +17,7 @@ export default function Process() {
         </Reveal>
 
         <Reveal stagger className="grid gap-px overflow-hidden rounded-xl border border-line bg-line md:grid-cols-2 lg:grid-cols-4">
-          {process.map((step) => (
+          {processSteps.map((step) => (
             <div key={step.step} className="bg-ink p-7 sm:p-8">
               <div className="mb-6 font-mono text-sm text-accent">
                 {step.step}

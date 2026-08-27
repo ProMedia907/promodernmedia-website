@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Geist, Geist_Mono } from "next/font/google";
-import { site } from "@/lib/site";
+import { site, siteUrl } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -19,14 +19,6 @@ const displaySerif = Cormorant_Garamond({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600"],
 });
-
-/**
- * Canonical origin for absolute URLs in metadata and the share card.
- * Set NEXT_PUBLIC_SITE_URL once the real domain is confirmed; the fallback
- * below is a placeholder and has never been verified as owned.
- */
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://promodernmedia.co.uk";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
