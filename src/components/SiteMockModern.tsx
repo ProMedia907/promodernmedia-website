@@ -1,7 +1,30 @@
 /**
- * The "after": the same joinery business, rebuilt.
+ * The "after": the same joinery business, rebuilt as a premium studio.
  * Fixed 1200x750 design size, scaled by the parent.
+ *
+ * Deliberately dark, serif-led and sparse -- the visual language of a
+ * business that charges properly, against the 2009 site's jumble.
  */
+
+const INK = "#0B0A08";
+const CREAM = "#EFE9DE";
+const MUTED = "#8C8578";
+const BRASS = "#B99B5F";
+const HAIRLINE = "rgba(239,233,222,0.13)";
+
+const SERIF = 'var(--font-display), "Didot", "Bodoni MT", Georgia, serif';
+const SANS =
+  'var(--font-geist-sans), ui-sans-serif, system-ui, "Segoe UI", sans-serif';
+
+/** Letter-spaced small caps, the workhorse of expensive-looking layouts. */
+const microLabel: React.CSSProperties = {
+  fontFamily: SANS,
+  fontSize: 9.5,
+  letterSpacing: "0.22em",
+  textTransform: "uppercase",
+  color: MUTED,
+};
+
 export default function SiteMockModern() {
   return (
     <div
@@ -9,10 +32,9 @@ export default function SiteMockModern() {
       style={{
         width: 1200,
         height: 750,
-        background: "#FBFAF7",
-        color: "#14140F",
-        fontFamily:
-          'ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif',
+        background: INK,
+        color: CREAM,
+        fontFamily: SANS,
       }}
       aria-hidden="true"
     >
@@ -22,243 +44,210 @@ export default function SiteMockModern() {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          padding: "20px 44px",
-          borderBottom: "1px solid #E7E4DC",
+          padding: "26px 56px",
+          borderBottom: `1px solid ${HAIRLINE}`,
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-          <div
-            style={{
-              width: 30,
-              height: 30,
-              borderRadius: 8,
-              background: "#14140F",
-              color: "#fff",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontSize: 14,
-              fontWeight: 700,
-            }}
-          >
-            N
-          </div>
-          <span style={{ fontSize: 17, fontWeight: 600, letterSpacing: -0.3 }}>
-            Northgate Joinery
-          </span>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            gap: 28,
-            fontSize: 14,
-            color: "#55554C",
-            alignItems: "center",
-          }}
-        >
-          <span>Work</span>
-          <span>Services</span>
-          <span>About</span>
-          <span>Reviews</span>
+        <div style={{ display: "flex", alignItems: "baseline", gap: 14 }}>
           <span
             style={{
-              background: "#14140F",
-              color: "#fff",
-              padding: "9px 18px",
-              borderRadius: 999,
-              fontWeight: 600,
-              fontSize: 13.5,
+              fontFamily: SERIF,
+              fontSize: 25,
+              letterSpacing: "0.17em",
+              fontWeight: 500,
             }}
           >
-            Get a quote
+            NORTHGATE
+          </span>
+          <span style={{ ...microLabel, fontSize: 8.5 }}>Est. 1987</span>
+        </div>
+
+        <div style={{ display: "flex", alignItems: "center", gap: 34 }}>
+          {["Kitchens", "Staircases", "Commissions", "Studio"].map((item) => (
+            <span key={item} style={{ ...microLabel, color: CREAM }}>
+              {item}
+            </span>
+          ))}
+          <span
+            style={{
+              ...microLabel,
+              color: INK,
+              background: BRASS,
+              padding: "11px 20px",
+              fontSize: 9,
+            }}
+          >
+            Request a consultation
           </span>
         </div>
       </div>
 
       {/* Hero */}
-      <div style={{ display: "flex", gap: 40, padding: "44px 44px 0" }}>
-        <div style={{ flex: 1, paddingTop: 8 }}>
-          <div
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 7,
-              background: "#EFEDE5",
-              borderRadius: 999,
-              padding: "6px 13px",
-              fontSize: 12.5,
-              color: "#55554C",
-              marginBottom: 22,
-              fontWeight: 500,
-            }}
-          >
-            <span style={{ color: "#E8A33D", fontSize: 13 }}>
-              &#9733;&#9733;&#9733;&#9733;&#9733;
-            </span>
-            4.9 from 127 Leeds homeowners
+      <div style={{ display: "flex", height: 512 }}>
+        {/* Left: type */}
+        <div
+          style={{
+            width: 640,
+            flexShrink: 0,
+            padding: "62px 56px 0",
+            borderRight: `1px solid ${HAIRLINE}`,
+          }}
+        >
+          <div style={{ ...microLabel, marginBottom: 30 }}>
+            Bespoke joinery <span style={{ color: BRASS }}>&middot;</span> Leeds
+            &amp; North Yorkshire
           </div>
 
           <h1
             style={{
-              fontSize: 56,
+              fontFamily: SERIF,
+              fontSize: 67,
               lineHeight: 1.02,
-              letterSpacing: -2.2,
-              fontWeight: 600,
-              marginBottom: 18,
+              letterSpacing: "-0.015em",
+              fontWeight: 300,
+              margin: 0,
+              marginBottom: 26,
             }}
           >
-            Carpentry that
+            Kitchens made to
             <br />
-            outlasts the house.
+            outlive the <em style={{ fontStyle: "italic", color: BRASS }}>
+              house
+            </em>
+            .
           </h1>
 
           <p
             style={{
-              fontSize: 16.5,
-              lineHeight: 1.55,
-              color: "#55554C",
-              maxWidth: 430,
-              marginBottom: 26,
+              fontSize: 14.5,
+              lineHeight: 1.75,
+              color: MUTED,
+              maxWidth: 405,
+              margin: 0,
+              marginBottom: 38,
             }}
           >
-            Fitted kitchens, wardrobes and staircases, built by hand in Leeds
-            since 1987. Free survey, fixed quote, and a firm date you can hold
-            us to.
+            Hand-cut joinery in solid English oak, walnut and ash. Drawn with
+            you, made in our Leeds workshop, fitted by the people who built it.
           </p>
 
-          <div style={{ display: "flex", gap: 12, marginBottom: 30 }}>
-            <div
+          <div style={{ display: "flex", alignItems: "center", gap: 26 }}>
+            <span
               style={{
-                background: "#14140F",
-                color: "#fff",
-                padding: "14px 26px",
-                borderRadius: 10,
-                fontWeight: 600,
-                fontSize: 15,
+                ...microLabel,
+                color: INK,
+                background: CREAM,
+                padding: "15px 28px",
+                fontSize: 9,
               }}
             >
-              Book a free survey
-            </div>
-            <div
+              Book a studio visit
+            </span>
+            <span
               style={{
-                border: "1px solid #D6D2C6",
-                padding: "14px 24px",
-                borderRadius: 10,
-                fontWeight: 600,
-                fontSize: 15,
-                color: "#14140F",
+                ...microLabel,
+                color: CREAM,
+                borderBottom: `1px solid ${BRASS}`,
+                paddingBottom: 5,
+                fontSize: 9,
               }}
             >
-              0113 496 0117
-            </div>
-          </div>
-
-          <div
-            style={{
-              display: "flex",
-              gap: 26,
-              fontSize: 12.5,
-              color: "#6B6B60",
-              borderTop: "1px solid #E7E4DC",
-              paddingTop: 18,
-            }}
-          >
-            {["Fully insured", "10-year guarantee", "No deposit taken"].map(
-              (t) => (
-                <span
-                  key={t}
-                  style={{ display: "flex", alignItems: "center", gap: 6 }}
-                >
-                  <span style={{ color: "#2E9E5B", fontWeight: 700 }}>
-                    &#10003;
-                  </span>
-                  {t}
-                </span>
-              )
-            )}
+              View the portfolio
+            </span>
           </div>
         </div>
 
-        {/* Hero image panel */}
-        <div style={{ width: 430, flexShrink: 0 }}>
+        {/* Right: image */}
+        <div style={{ flex: 1, position: "relative", overflow: "hidden" }}>
           <div
             style={{
-              height: 300,
-              borderRadius: 14,
-              overflow: "hidden",
-              position: "relative",
+              position: "absolute",
+              inset: 0,
               background:
-                "linear-gradient(150deg, #6B4A2F 0%, #8A6440 42%, #A67C52 70%, #C49A6E 100%)",
+                "linear-gradient(157deg, #2A1E14 0%, #4A3524 34%, #6B4C31 62%, #34251A 100%)",
+            }}
+          />
+          {/* Grain */}
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              background:
+                "repeating-linear-gradient(93deg, rgba(0,0,0,0.16) 0 1px, rgba(255,255,255,0.028) 1px 7px)",
+            }}
+          />
+          {/* Vignette */}
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              background:
+                "radial-gradient(ellipse at 62% 38%, transparent 24%, rgba(11,10,8,0.62) 100%)",
+            }}
+          />
+
+          <div
+            style={{
+              position: "absolute",
+              left: 40,
+              bottom: 40,
+              paddingLeft: 17,
+              borderLeft: `1px solid ${BRASS}`,
             }}
           >
-            {/* Wood grain suggestion */}
+            <div style={{ ...microLabel, marginBottom: 7, fontSize: 8.5 }}>
+              Commission no. 214
+            </div>
             <div
               style={{
-                position: "absolute",
-                inset: 0,
-                background:
-                  "repeating-linear-gradient(96deg, rgba(0,0,0,0.10) 0 2px, rgba(255,255,255,0.045) 2px 9px)",
-              }}
-            />
-            <div
-              style={{
-                position: "absolute",
-                left: 18,
-                bottom: 18,
-                background: "rgba(255,255,255,0.94)",
-                borderRadius: 10,
-                padding: "11px 15px",
-                maxWidth: 250,
+                fontFamily: SERIF,
+                fontSize: 21,
+                fontWeight: 400,
+                letterSpacing: "0.01em",
               }}
             >
-              <div style={{ fontSize: 12, color: "#6B6B60", marginBottom: 2 }}>
-                Recent project
-              </div>
-              <div style={{ fontSize: 14, fontWeight: 600 }}>
-                Oak kitchen, Roundhay
-              </div>
+              Burr oak island, Roundhay
             </div>
           </div>
         </div>
       </div>
 
-      {/* Service strip */}
+      {/* Credentials band */}
       <div
         style={{
           display: "flex",
-          gap: 14,
-          padding: "34px 44px 0",
+          alignItems: "center",
+          borderTop: `1px solid ${HAIRLINE}`,
+          // 147, not 148: the serif wordmark makes the nav 90.5px tall.
+          height: 147,
         }}
       >
         {[
-          ["Fitted kitchens", "From £4,200"],
-          ["Wardrobes & storage", "From £1,850"],
-          ["Staircases", "From £2,400"],
-          ["Decking & outdoor", "From £38/sqm"],
-        ].map(([title, price]) => (
+          ["38 yrs", "Family owned"],
+          ["Guild", "Master Craftsmen"],
+          ["10 yr", "Written guarantee"],
+          ["Solid", "English hardwood"],
+        ].map(([big, small], i) => (
           <div
-            key={title}
+            key={big}
             style={{
               flex: 1,
-              border: "1px solid #E7E4DC",
-              borderRadius: 12,
-              padding: "16px 16px 18px",
-              background: "#fff",
+              padding: "0 46px",
+              borderLeft: i === 0 ? "none" : `1px solid ${HAIRLINE}`,
             }}
           >
             <div
               style={{
-                width: 30,
-                height: 30,
-                borderRadius: 8,
-                background: "#F2EFE6",
-                marginBottom: 12,
+                fontFamily: SERIF,
+                fontSize: 31,
+                fontWeight: 400,
+                marginBottom: 9,
+                color: BRASS,
               }}
-            />
-            <div style={{ fontSize: 14.5, fontWeight: 600, marginBottom: 3 }}>
-              {title}
+            >
+              {big}
             </div>
-            <div style={{ fontSize: 13, color: "#6B6B60" }}>{price}</div>
+            <div style={microLabel}>{small}</div>
           </div>
         ))}
       </div>
