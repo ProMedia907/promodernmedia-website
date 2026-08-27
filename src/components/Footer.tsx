@@ -22,12 +22,6 @@ export default function Footer() {
             </a>
           ))}
           <a
-            href={`tel:${site.phoneHref}`}
-            className="text-sm text-muted transition-colors hover:text-bone"
-          >
-            {site.phone}
-          </a>
-          <a
             href={`mailto:${site.email}`}
             className="text-sm text-muted transition-colors hover:text-bone"
           >

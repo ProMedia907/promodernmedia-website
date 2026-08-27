@@ -50,3 +50,6 @@ web/vendor/
 .superpowers/
 *.db
 .env
+
+# Env documentation is safe to commit; real keys live in .env.local
+!.env.example

@@ -113,13 +113,6 @@ export default function Nav() {
             >
               Get a quote
             </a>
-            <a
-              href={`tel:${site.phoneHref}`}
-              onClick={() => setOpen(false)}
-              className="mt-2 rounded-lg border border-line px-3 py-3.5 text-center text-base font-semibold text-bone"
-            >
-              {site.phone}
-            </a>
           </nav>
         </div>
       ) : null}

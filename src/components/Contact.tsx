@@ -83,15 +83,6 @@ export default function Contact() {
 
             <div className="mt-9 space-y-3 border-t border-line pt-8">
               <a
-                href={`tel:${site.phoneHref}`}
-                className="flex items-center gap-3 text-[15px] text-bone transition-colors hover:text-accent"
-              >
-                <span className="w-12 shrink-0 font-mono text-xs text-muted">
-                  Call
-                </span>
-                {site.phone}
-              </a>
-              <a
                 href={`mailto:${site.email}`}
                 className="flex items-center gap-3 text-[15px] text-bone transition-colors hover:text-accent"
               >
