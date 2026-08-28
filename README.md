@@ -57,6 +57,11 @@ With no configuration the form composes a `mailto:` to the address in
 `site.ts`, which works with no backend. Set `NEXT_PUBLIC_FORM_ENDPOINT` to a
 form service (Formspree, Basin, or your own route handler) to post instead.
 
+## Deploying
+
+See [DEPLOY.md](DEPLOY.md) for Vercel setup and GoDaddy DNS, including the
+environment variables the live site needs.
+
 ## Before this goes live
 
 - [ ] **Replace the sample reviews.** Connect Google (above) or replace the
