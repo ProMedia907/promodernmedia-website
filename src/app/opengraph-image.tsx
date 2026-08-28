@@ -1,6 +1,9 @@
 import { ImageResponse } from "next/og";
 import { site } from "@/lib/site";
 
+/** Required for output: export -- emit this at build time. */
+export const dynamic = "force-static";
+
 /**
  * The card that renders when someone pastes a link to this site into
  * WhatsApp, Facebook, LinkedIn or iMessage. Generated at build time from the
