@@ -1,0 +1,12 @@
+0000000000000000000000000000000000000000 8ef00981cd5d850f039f7b8423ff306c9bb5b88c Moham <wahidsubhaan0@gmail.com> 1787865158 +0100	commit (initial): Initial commit
+8ef00981cd5d850f039f7b8423ff306c9bb5b88c abdefa910ac2167f67f09fd991eb6beb7ee2ffa9 Moham <wahidsubhaan0@gmail.com> 1787865166 +0100	am: Build ProModernMedia marketing site
+abdefa910ac2167f67f09fd991eb6beb7ee2ffa9 e5d2b5565afb3022f027bdb2997a25408f1da3aa Moham <wahidsubhaan0@gmail.com> 1787865166 +0100	am: Add about and reviews sections
+e5d2b5565afb3022f027bdb2997a25408f1da3aa 3d5bc5c045cae6f5f1236f6373f4b9d69e6133d8 Moham <wahidsubhaan0@gmail.com> 1787865166 +0100	am: Pull reviews live from Google Business Profile
+3d5bc5c045cae6f5f1236f6373f4b9d69e6133d8 8f53e46cf03942b94454ceeed15579a652de7969 Moham <wahidsubhaan0@gmail.com> 1787865166 +0100	am: Redesign the "after" site as a premium studio
+8f53e46cf03942b94454ceeed15579a652de7969 ee103c4746020e91a93f90c08ea253c17d245559 Moham <wahidsubhaan0@gmail.com> 1787865198 +0100	commit: Drop Python ignore rules inherited from the source repo
+ee103c4746020e91a93f90c08ea253c17d245559 99a2ecf1ca76ca90c774c1ca87658c5eda704d9e ProModernMedia <ProMedia04@outlook.com> 1787865198 +0100	filter-branch: rewrite
+99a2ecf1ca76ca90c774c1ca87658c5eda704d9e 092eddff47c9f60bc74cd1ce65eacb144dd1e941 ProModernMedia <ProMedia04@outlook.com> 1787874396 +0100	commit: Add OpenGraph share card and make the site URL configurable
+092eddff47c9f60bc74cd1ce65eacb144dd1e941 fb2295fbb1100334962c7f9593db4461c9947b4b ProModernMedia <ProMedia04@outlook.com> 1787874437 +0100	commit (amend): Add OpenGraph share card and make the site URL configurable
+fb2295fbb1100334962c7f9593db4461c9947b4b 3f79fce607fa170fc8fb1af660e9afc94c0e03ad ProModernMedia <ProMedia04@outlook.com> 1787874988 +0100	commit: Add privacy notice, robots, sitemap and a real favicon
+3f79fce607fa170fc8fb1af660e9afc94c0e03ad cf80648afd7d6aa5d226372a463f0485d2d36bc5 ProModernMedia <ProMedia04@outlook.com> 1787875438 +0100	commit: Add Vercel + GoDaddy deployment guide
+cf80648afd7d6aa5d226372a463f0485d2d36bc5 63faca91d0b5b358e54ce7fb78ab2214a625e411 ProModernMedia <ProMedia04@outlook.com> 1787875857 +0100	commit: Support static export for GoDaddy hosting
